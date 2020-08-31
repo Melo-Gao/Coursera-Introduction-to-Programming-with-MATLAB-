@@ -1,0 +1,5 @@
+debt = 1000
+interest_rate = 1.1
+years = 2
+interest_rate = interest_rate.^years
+debt = debt *interest_rate
