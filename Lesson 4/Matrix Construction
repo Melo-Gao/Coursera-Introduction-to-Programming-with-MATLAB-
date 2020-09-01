@@ -1,0 +1,6 @@
+function M = trio(n, m)
+A = ones(n, m)
+B = 2*ones(n, m)
+C = 3*ones(n,m)
+M = [A;B;C]
+end
