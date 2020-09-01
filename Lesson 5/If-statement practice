@@ -1,0 +1,7 @@
+function out = picker(a,b,c)
+    if a
+        out = b;
+    else
+        out = c;
+    end
+end
