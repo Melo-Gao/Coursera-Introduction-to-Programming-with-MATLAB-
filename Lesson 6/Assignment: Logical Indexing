@@ -1,0 +1,4 @@
+function numfreeze = freezing(A)
+    A = A(A<32);
+    numfreeze = size(A,2);
+end
