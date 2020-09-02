@@ -1,0 +1,9 @@
+function summa = halfsum(A)
+summa = 0;
+[rows, cols] = size(A);
+for i = 1:rows
+    for j = i:cols
+    summa = summa + A(i,j);
+    end
+end
+end
