@@ -1,7 +1,10 @@
 function [summa, index] = max_sum(V, n)
     [rows cols] = size(V);
-    summa = 0;
+    summa = -Inf;
     index = -1;
+    if n > cols
+        summa = 0;
+    end
     for i = 1:cols-n+1
         s = sum(V(i:i+n-1));
         if s > summa
@@ -9,4 +12,3 @@ function [summa, index] = max_sum(V, n)
             index = i;
         end
     end
-end
