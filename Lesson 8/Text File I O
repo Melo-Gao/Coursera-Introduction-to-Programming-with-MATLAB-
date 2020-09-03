@@ -1,0 +1,13 @@
+function charnum = char_counter(fname,char)
+fid = fopen(fname);
+    if fid < 0
+       charnum = -1;
+       return
+    end
+    if ischar(char) == 0
+       charnum = -1;
+       return
+    end
+F = fscanf (fid, '%c');
+charnum = count(F,char);
+end
