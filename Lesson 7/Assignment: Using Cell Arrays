@@ -1,0 +1,6 @@
+function matrix = sparse2matrix(Cell)
+matrix = Cell{2}*ones(Cell{1});
+for i = 3:size(Cell,2)
+    matrix(Cell{i}(1),Cell{i}(2)) = Cell{i}(3);
+end
+end
