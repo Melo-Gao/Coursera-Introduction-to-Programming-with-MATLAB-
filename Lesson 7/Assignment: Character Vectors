@@ -1,0 +1,11 @@
+function coded = caesar(A, n)
+B = A + n;
+for k = 1:length(A)
+    if B(k) > 126
+        B(k) = 32+ mod(B(k)-32, 95);
+    elseif B(k) <32
+        B(k) = 126 - mod(31-B(k), 95);
+    end
+end
+coded = char(B);
+end
