@@ -1,0 +1,28 @@
+function output = blur(img, w);
+[rows cols] = size(img);
+output = zeros(rows, cols);
+for i = 1:rows
+    for j = 1:cols
+         r1 = i-w;
+         r2 = i+w;
+         c1 = j-w;
+         c2 = j+w;
+         if r1 < 1
+            r1 = 1;
+         end
+         if r2 > rows
+            r2 = rows;
+         end
+         if c1 < 1
+            c1 = 1;
+         end
+         if c2 > cols
+            c2 = cols; 
+         end
+         submatrix = img(r1:r2, c1:c2);
+         output(i, j) = mean(submatrix(:));
+    end
+end
+output = uint8(output);
+
+end
