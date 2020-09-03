@@ -1,0 +1,26 @@
+function distance = get_distance(c1, c2)
+[~, city raws] = xlsread('Distances.xlsx');
+for i=2:size(raws,1)
+    if strcmp(city{i,1}, c1)
+        break
+    end
+end
+if i >= size(raws,1)
+    distance = -1
+else
+    for j=2:size(raws,2)
+      if strcmp(city{1,j}, c2)
+          distance=raws{i,j};
+          break
+      end
+    end
+    if j >= size(raws,1)
+        distance = -1
+    end
+end
+
+    
+
+
+
+end
